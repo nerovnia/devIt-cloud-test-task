@@ -1,0 +1,16 @@
+{
+  "name": "devit-cloud-test-task-back",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Volodymyr Nerovnia <nerv@i.ua>",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/rate-limit": "^7.0.0",
+    "fastify": "^4.26.2"
+  }
+}
