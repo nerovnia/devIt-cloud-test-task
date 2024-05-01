@@ -1,14 +1,13 @@
 import { useState, useEffect } from 'react'
 
-export function Button({ inputNumber }) {
-  const [totalRequests, setTotalRequests] = useState(1000);
-  let maxRequests = 0;
+export function Button({ inputNumber, totalRequests }) {
   const [isLoading, setIsLoading] = useState(false);
   const timeMap: Map<number, number> = new Map();
   timeMap.set(1, Date.now());
 
   function handleButtonClick() {
     console.log(`inputNumber: ${inputNumber}`);
+    console.log(`totalRequests: ${totalRequests}`);
     setTimeout(() => {
       timeMap.set(2, Date.now());
 
