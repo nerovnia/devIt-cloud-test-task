@@ -1,25 +1,23 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, ChangeEvent } from 'react'
 
-export function Input({ onNumberChange }) {
-  const [number, setNumber] = useState('')
+export function Input() {
+  const [reqnumber, setNumber] = useState(0)
 
-  useEffect(() => {
-    //console.log(number);
-  }, [number])
+  ///useEffect(() => {
+  //  console.log(reqnumber);
+  //}, [reqnumber])
 
-  function handleNumberChange(event) {
-    const input = event.target.value;
-    if (input === '' || (input >= 0 && input <= 100)) {
-      setNumber(input);
-      onNumberChange(input);
+  function handleNumberChange(event: ChangeEvent<HTMLInputElement>) {
+    const inputValue = event.target.value;
+    if (inputValue === '') setNumber(0);
+    if (/^\d*$/.test(inputValue) && parseInt(inputValue, 10) <= 100) {
+      setNumber(Number.parseInt(inputValue));
     }
-    //console.log(number);
   }
-
 
   return (
     <>
-      <input type="number" name="" id="" onChange={handleNumberChange} value={number} />
+      <input type="number" name="" id="" onChange={handleNumberChange} value={reqnumber} />
     </>
   )
 }
