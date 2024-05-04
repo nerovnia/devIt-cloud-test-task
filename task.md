@@ -10,4 +10,4 @@ Implement client-server data fetch logic by following the next steps:
    3. Return 429-code error response if received more than 50 requests per second
 3. Client-side JS should render the results of server responses (request indexes) to one list immediately after each response
 
-You can choose any technology stack that you will use to implement the logic.
+You can choose any technology stack that you will use to implement the logic. 
